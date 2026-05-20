@@ -109,7 +109,6 @@ public void saque(double valor) {
 ## 🎯 Melhorias futuras
 
 - [ ] Validação de saldo negativo
-- [ ] Menu interativo com `while`
 - [ ] Múltiplos clientes
 - [ ] Persistência de dados
 - [ ] Interface gráfica
