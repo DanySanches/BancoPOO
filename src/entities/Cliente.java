@@ -2,19 +2,22 @@ package entities;
 
 public class Cliente {
 
+    private int conta;
     private String nome;
     private double saldo;
-    private int CONTA;
     private final double TAXA = 5.00;
 
-    public Cliente(String nome, double saldo, int CONTA) {
+    public Cliente(int conta,String nome) {
+        this.conta = conta;
         this.nome = nome;
-        this.saldo = saldo;
-        this.CONTA = CONTA;
+
     }
 
-    public Cliente() {
 
+    public Cliente( int conta, String nome, double valorInicial) {
+        this.conta = conta;
+        this.nome = nome;
+        deposito(valorInicial);
     }
 
 
@@ -30,17 +33,17 @@ public class Cliente {
         return saldo;
     }
 
-    public void setSaldo(double saldo) {
+   /* public void setSaldo(double saldo) {
         this.saldo = saldo;
+    }*/
+
+
+    public int getConta() {
+        return conta;
     }
 
-
-    public int getCONTA() {
-        return CONTA;
-    }
-
-    public void setCONTA(int CONTA) {
-        this.CONTA = CONTA;
+    public void setConta(int conta) {
+        this.conta = conta;
     }
 
     public void deposito(double valor) {
@@ -56,7 +59,7 @@ public class Cliente {
     public String toString(){
 
         return "Conta: "
-                + CONTA
+                + conta
                 + ", Nome: "
                 + nome
                 + ", Saldo: R$ "
