@@ -1,5 +1,8 @@
 # Compiled class file
 *.class
+.gitignore
+BancoPOO.iml
+./src/repostaProf
 
 # Log file
 *.log
